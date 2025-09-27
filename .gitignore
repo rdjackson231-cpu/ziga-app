@@ -1,0 +1,63 @@
+# Laravel & Filament .gitignore
+
+# Composer
+/vendor/
+/composer.lock
+
+# Node / NPM / Yarn
+/node_modules/
+/npm-debug.log
+/yarn-error.log
+/pnpm-debug.log
+/.pnp
+/.pnp.js
+
+# Laravel & PHP
+/.env
+/.env.*.php
+/.phpunit.result.cache
+/storage/*.key
+/storage/debugbar/*
+/storage/framework/cache/data/*
+/storage/framework/sessions/*
+/storage/framework/views/*
+/storage/logs/*
+/bootstrap/cache/*.php
+
+# IDEs & OS
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+.DS_Store
+Thumbs.db
+
+# Laravel Mix / Vite / Frontend
+/public/hot
+/public/storage
+/public/build
+/public/mix-manifest.json
+/public/vite-manifest.json
+
+# Filament Admin Panel (Optional caches or temp)
+filament-assets/
+
+# Optional: Jetstream / Breeze / other packages
+/node_modules/
+npm-debug.log
+yarn-error.log
+
+# PHPUnit & Testing
+/.phpunit.result.cache
+/tests/_output/
+
+# Docker
+docker-compose.override.yml
+.env.docker
+
+# Misc
+*.log
+*.cache
+*.swp
+*.bak
+*.tmp
