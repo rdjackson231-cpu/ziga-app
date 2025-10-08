@@ -9,6 +9,7 @@ use App\Filament\Resources\Pacientes\Pages\ViewPaciente;
 use App\Filament\Resources\Pacientes\Schemas\PacienteForm;
 use App\Filament\Resources\Pacientes\Schemas\PacienteInfolist;
 use App\Filament\Resources\Pacientes\Tables\PacientesTable;
+use App\Filament\Resources\Pacientes\RelationManagers\PatientRelationManager;
 use App\Models\Patient;
 use BackedEnum;
 use Filament\Resources\Resource;
@@ -42,7 +43,7 @@ class PacienteResource extends Resource
     public static function getRelations(): array
     {
         return [
-            //
+            PatientRelationManager::class,
         ];
     }
 
