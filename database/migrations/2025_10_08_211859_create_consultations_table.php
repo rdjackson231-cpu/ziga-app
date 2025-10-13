@@ -18,6 +18,7 @@ return new class extends Migration
             $table->text('notes')->nullable();
             $table->json('attached_files')->nullable(); // Para almacenar archivos como JSON
             $table->timestamps();
+            $table->foreignId('medical_record_id')->constrained('medical_records')->cascadeOnDelete();
         });
     }
 

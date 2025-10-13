@@ -20,4 +20,10 @@ class Consultation extends Model
         'date' => 'datetime',
         'attached_files' => 'array', // Convierte JSON automáticamente a array
     ];
+
+
+    public function medicalRecord()
+    {
+        return $this->belongsTo(MedicalRecord::class);
+    }
 }

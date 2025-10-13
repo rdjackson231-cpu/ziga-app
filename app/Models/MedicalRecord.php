@@ -36,4 +36,9 @@ class MedicalRecord extends Model
     {
         return $this->hasMany(ClinicalHistory::class);
     }
+
+    public function consultations()
+    {
+        return $this->hasMany(Consultation::class);
+    }
 }

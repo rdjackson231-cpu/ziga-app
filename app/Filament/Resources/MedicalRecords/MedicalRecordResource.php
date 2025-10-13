@@ -9,6 +9,7 @@ use App\Filament\Resources\MedicalRecords\Pages\ViewMedicalRecord;
 use App\Filament\Resources\MedicalRecords\Schemas\MedicalRecordForm;
 use App\Filament\Resources\MedicalRecords\Schemas\MedicalRecordInfolist;
 use App\Filament\Resources\MedicalRecords\Tables\MedicalRecordsTable;
+use App\Filament\Resources\MedicalRecords\RelationManagers\ConsultationRelationManager;
 use App\Models\MedicalRecord;
 use BackedEnum;
 use Filament\Resources\Resource;
@@ -41,8 +42,9 @@ class MedicalRecordResource extends Resource
 
     public static function getRelations(): array
     {
+       
         return [
-            //
+            ConsultationRelationManager::class,
         ];
     }
 
