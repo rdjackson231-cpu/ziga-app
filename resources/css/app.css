@@ -1,3 +1,6 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@import 'filament/forms/styles';
+@import 'filament/support/styles';

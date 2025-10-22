@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Str;
 
 class Patient extends Model
 {
@@ -43,6 +44,14 @@ class Patient extends Model
     public function medicalRecord()
     {
         return $this->hasOne(MedicalRecord::class);
+    }
+
+
+    protected static function booted()
+    {
+        static::creating(function ($model) {
+            $model->token = (string) Str::uuid();
+        });
     }
 
 }

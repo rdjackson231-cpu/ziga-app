@@ -64,6 +64,6 @@ class PacienteForm
 
                 Forms\Components\TextInput::make('emergency_contact_phone')
                     ->label('Celular del contacto de emergencia'),
-            ]);
+            ])->statePath('data');
     }
 }
