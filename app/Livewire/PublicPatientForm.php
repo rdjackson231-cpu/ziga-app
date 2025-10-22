@@ -24,6 +24,12 @@ class PublicPatientForm extends Component implements Forms\Contracts\HasForms
     $this->form->fill($this->patient->toArray());
 }
 
+protected function getFormStatePath(): string
+{
+    return 'data';
+}
+
+
 
     protected function getFormSchema(): array
 {
