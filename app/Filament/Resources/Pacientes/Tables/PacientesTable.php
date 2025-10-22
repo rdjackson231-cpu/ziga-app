@@ -4,9 +4,8 @@ namespace App\Filament\Resources\Pacientes\Tables;
 
 use Filament\Tables;
 use Filament\Tables\Table;
-use Filament\Actions\EditAction;
-use Filament\Actions\ViewAction;
-use Filament\Actions\DeleteAction;
+use Filament\Actions\Action;
+use Illuminate\Support\Str;
 
 class PacientesTable
 {
@@ -25,9 +24,28 @@ class PacientesTable
             ])
             ->filters([])
             ->recordActions([
-                ViewAction::make(),
-                EditAction::make(),
-                DeleteAction::make(),
+                // Aquí van las acciones de fila si quieres
+            ])
+            ->headerActions([
+                Action::make('generar_link')
+                    ->label('Generar link de registro')
+                    ->icon('heroicon-o-link')
+                    ->color('success')
+                    ->modalHeading('Link público de registro')
+                    ->modalSubheading('Envía este enlace al paciente para que llene su formulario de registro.')
+                    ->modalContent(function () {
+                        // Generar token temporal
+                        $token = (string) Str::uuid();
+                        $url = url('/registro/' . $token);
+
+                        // Guardar token en session para seguimiento opcional
+                        session()->flash('public_patient_token', $token);
+
+                        return view('livewire.copy-link-modal', [
+                            'url' => $url,
+                        ]);
+                    })
+                    ->modalSubmitAction(false),
             ]);
     }
 }
