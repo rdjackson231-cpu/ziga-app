@@ -243,8 +243,8 @@ Forms\Components\Select::make('medical_record_id')
                             Toggle::make('current_pregnancy')->inline(false),
                         ]),
                     ])
-                    ->collapsed()
-                    ->visible(fn ($get) => (bool) $get('gyn_ob_enabled')),
+                    ->collapsed(),
+                    //->visible(fn ($get) => (bool) $get('gyn_ob_enabled')),
                     
                 Section::make('Nutrition & Beverages')
                     ->schema([
