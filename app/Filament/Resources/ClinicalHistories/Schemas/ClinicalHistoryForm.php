@@ -76,7 +76,7 @@ Forms\Components\Select::make('medical_record_id')
                             //->helperText('Optional one-to-one link to medical_records'),
                     ])->columns(4),
 
-                Section::make('Personal Info & Contact')
+                /*Section::make('Personal Info & Contact')
                     ->schema([
                         Grid::make(4)->schema([
                             TextInput::make('first_name')->required()->maxLength(120),
@@ -114,7 +114,7 @@ Forms\Components\Select::make('medical_record_id')
                             TextInput::make('home_pets')->label('Home pets')->helperText('e.g., Perro, Gato'),
                             Toggle::make('vaccination_complete')->label('Vaccination complete')->inline(false),
                         ]),
-                    ])->collapsible(),
+                    ])->collapsible(),*/
 
                 Section::make('Chief Complaint & Pain')
                     ->schema([

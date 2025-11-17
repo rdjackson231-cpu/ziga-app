@@ -17,9 +17,8 @@ return new class extends Migration {
             $table->text('general_notes')->nullable();
             // --- Metadatos del formulario ---
             $table->timestamp('submitted_at')->nullable();            // "Marca temporal"
-            $table->string('email')->nullable();
 
-            // --- Datos personales ---
+            /* --- Datos personales ---
             $table->string('last_name_father')->nullable();          // Apellido Paterno  
             $table->string('last_name_mother')->nullable();          // Apellido Materno
             $table->string('first_name')->nullable();                // Primer Nombre
@@ -29,7 +28,8 @@ return new class extends Migration {
             $table->enum('sex', ['Female','Male','Other'])->nullable();
             $table->string('address')->nullable();
             $table->string('phone', 30)->nullable();
-            $table->string('blood_type')->nullable();
+            $table->string('email')->nullable();
+            $table->string('blood_type')->nullable();*/
 
             // --- Contacto de emergencia ---
             $table->string('emergency_contact_name')->nullable();

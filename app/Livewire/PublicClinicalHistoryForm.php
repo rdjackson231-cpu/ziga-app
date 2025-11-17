@@ -69,7 +69,7 @@ class PublicClinicalHistoryForm extends Component implements HasForms
                     ->rows(4)
                     ->maxLength(2000),
 
-                Section::make('Datos personales y contacto')
+                /*Section::make('Datos personales y contacto')
                     ->schema([
                         Grid::make(4)->schema([
                             TextInput::make('first_name')->label('Nombre')->required()->maxLength(120),
@@ -108,7 +108,7 @@ class PublicClinicalHistoryForm extends Component implements HasForms
                             Toggle::make('vaccination_complete')->label('Esquema de vacunación completo')->inline(false),
                             TextInput::make('email')->label('Correo electrónico')->email()->maxLength(190),
                         ]),
-                    ])->collapsible(),
+                    ])->collapsible(),*/
 
                 Section::make('Motivo de consulta y dolor')
                     ->schema([

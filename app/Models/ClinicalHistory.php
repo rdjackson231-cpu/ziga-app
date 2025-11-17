@@ -33,9 +33,10 @@ class ClinicalHistory extends Model
         'medical_record_id',
         'status',
         'general_notes',
-        'submitted_at', 'email',
+        'submitted_at', 
+        /*'email',
         'last_name_father','last_name_mother','first_name','middle_name','dob','age_text','sex','address','phone','blood_type',
-        'emergency_contact_name','emergency_contact_phone',
+        'emergency_contact_name','emergency_contact_phone',*/
         'chief_complaint','treatment_goal','pain_intensity_max','pain_intensity_min','pain_duration','pain_onset_how',
         'pain_areas','pain_triggers','pain_relievers','pain_qualities','treatments_tried',
         'birthplace','marital_status','education_level','religion','home_pets','vaccination_complete',
