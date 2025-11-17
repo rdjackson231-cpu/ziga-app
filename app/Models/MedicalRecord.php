@@ -20,7 +20,7 @@ class MedicalRecord extends Model
         });
     }
     
-    protected $fillable = ['patient_id', 'code', 'general_notes'];
+    protected $fillable = ['patient_id', 'code', 'general_notes','token'];
 
 
     // Añadir accesores para exponer `code` como alias de `codigo`

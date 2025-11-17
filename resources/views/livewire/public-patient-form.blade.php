@@ -8,12 +8,13 @@
         </div>
     @endif
 
-<form wire:submit.prevent="submit" class="space-y-4">
+<form wire:submit.prevent="next" class="space-y-4">
     {{ $this->form }}
     <button type="submit"
         class="mt-6 bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-2 rounded">
-        Enviar registro
+        Siguiente
     </button>
+ 
 </form>
 
 </div>
