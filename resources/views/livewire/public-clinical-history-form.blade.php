@@ -1,55 +1,76 @@
-<div class="min-h-screen bg-gray-100 flex items-center justify-center px-4 py-8">
+{{-- resources/views/livewire/public-clinical-history-form.blade.php --}}
+
+<div class="min-h-screen bg-gradient-to-br from-slate-100 via-slate-200 to-slate-300 flex items-start sm:items-center justify-center px-4 py-8">
     <div class="w-full max-w-3xl">
-        <div class="bg-white shadow-lg rounded-xl p-6 sm:p-8 space-y-6">
 
-            {{-- Encabezado --}}
-            <header class="text-center space-y-2">
-                <h1 class="text-2xl sm:text-3xl font-bold text-gray-800">
-                    Historia Clínica
-                </h1>
-                <p class="text-sm text-gray-500">
-                    Completa la información para registrar o actualizar la historia clínica del paciente.
-                </p>
-            </header>
+        {{-- Encabezado estilo Google Forms --}}
+        <div class="mb-6 text-center">
+            <h1 class="text-2xl sm:text-3xl font-semibold text-slate-800">
+                Historia Clínica
+            </h1>
+            <p class="mt-2 text-sm sm:text-base text-slate-600">
+                Completa la información clínica del paciente.  
+                Los campos marcados como obligatorios deben llenarse para guardar el formulario.
+            </p>
+        </div>
 
-            {{-- Sección: Datos del expediente --}}
-            <section class="border rounded-lg p-4 sm:p-5 bg-gray-50">
-                <h2 class="text-base sm:text-lg font-semibold text-gray-800 mb-2">
-                    Datos del Expediente
-                </h2>
+        {{-- Card principal --}}
+        <div class="bg-white/95 rounded-2xl shadow-xl border border-slate-200 overflow-hidden">
 
-                <div class="text-sm text-gray-700 flex flex-wrap gap-2">
-                    <span>Expediente:</span>
-                    <strong class="font-semibold">
-                        {{ $medicalRecord->code ?? ('#' . $medicalRecord->id) }}
-                    </strong>
-                </div>
-            </section>
+            {{-- Barra superior de acento --}}
+            <div class="h-1.5 bg-gradient-to-r from-indigo-500 via-sky-500 to-cyan-400"></div>
 
-            {{-- Sección: Formulario (campos de Filament) --}}
-            <section class="border rounded-lg p-4 sm:p-5">
-                <h2 class="text-base sm:text-lg font-semibold text-gray-800 mb-4">
-                    Información Clínica
-                </h2>
+            <div class="p-5 sm:p-8 space-y-6">
 
-                <form wire:submit.prevent="submit" class="space-y-4">
-                    {{-- Aquí se renderizan los campos definidos en el form de Filament --}}
-                    <div class="space-y-4">
-                        {{ $this->form }}
+                {{-- Sección: Datos del expediente --}}
+                <section class="rounded-xl bg-slate-50 border border-slate-200 px-4 py-3 sm:px-5 sm:py-4">
+                    <div class="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-2">
+                        <div>
+                            <h2 class="text-sm font-semibold text-slate-800">
+                                Datos del expediente
+                            </h2>
+                            <p class="text-xs text-slate-500">
+                                Información de referencia para este registro.
+                            </p>
+                        </div>
+
+                        <div class="text-sm sm:text-base text-slate-700">
+                            <span class="text-xs uppercase tracking-wide text-slate-400">Expediente</span>
+                            <div class="font-semibold text-slate-900">
+                                {{ $medicalRecord->code ?? ('#' . $medicalRecord->id) }}
+                            </div>
+                        </div>
                     </div>
+                </section>
 
-                    {{-- Sección: Acciones --}}
-                    <div class="pt-4 border-t flex flex-col sm:flex-row items-stretch sm:items-center justify-end gap-3">
-                        <x-filament::button
-                            type="submit"
-                            class="w-full sm:w-auto justify-center"
-                        >
-                            Guardar
-                        </x-filament::button>
+                {{-- Formulario Filament --}}
+                <form wire:submit.prevent="submit" class="space-y-6">
+
+                    <section class="space-y-4">
+                        {{-- Aquí Filament renderiza todos los campos --}}
+                        {{ $this->form }}
+                    </section>
+
+                    {{-- Footer / acciones --}}
+                    <div class="pt-4 border-t border-slate-200 flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-4">
+                        <p class="text-xs text-slate-500">
+                            Revisa la información antes de guardar.  
+                            Puedes actualizar este registro posteriormente si es necesario.
+                        </p>
+
+                        <div class="flex gap-3 justify-end">
+                            {{-- Si quieres un botón secundario en el futuro, va aquí --}}
+                            <x-filament::button
+                                type="submit"
+                                class="w-full sm:w-auto justify-center"
+                            >
+                                Guardar
+                            </x-filament::button>
+                        </div>
                     </div>
                 </form>
-            </section>
 
+            </div>
         </div>
     </div>
 </div>

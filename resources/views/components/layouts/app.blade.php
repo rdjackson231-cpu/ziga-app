@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registro de paciente</title>
-    
+
     @livewireStyles
     @filamentStyles
 <script src="https://cdn.tailwindcss.com"></script>
@@ -17,5 +17,6 @@
 <body class="bg-gray-100">
     {{ $slot }}
     @livewireScripts
+    @filamentScripts
 </body>
 </html>
