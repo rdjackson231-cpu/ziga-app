@@ -16,11 +16,12 @@ class MedicalRecord extends Model
                 // Generar código tipo MR-00001, MR-00002, etc.
                 $nextId = (MedicalRecord::max('id') ?? 0) + 1;
                 $record->code = 'EXP-' . str_pad($nextId, 5, '0', STR_PAD_LEFT);
+                $record->status = 'open';
             }
         });
     }
     
-    protected $fillable = ['patient_id', 'code', 'general_notes','token'];
+    protected $fillable = ['patient_id', 'code', 'general_notes', 'status', 'token'];
 
 
     // Añadir accesores para exponer `code` como alias de `codigo`

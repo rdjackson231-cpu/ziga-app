@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id();
             $table->foreignId('patient_id')->constrained('patients')->cascadeOnDelete();
             $table->string('code');
+            $table->string('status');
             $table->text('general_notes')->nullable();
             $table->timestamps();
         });

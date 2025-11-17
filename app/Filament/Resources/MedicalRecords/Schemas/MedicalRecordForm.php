@@ -21,6 +21,15 @@ class MedicalRecordForm
                 Forms\Components\TextInput::make('code')
                     ->label('Code')
                     ->unique(ignoreRecord: true),
+                
+                Forms\Components\Select::make('status')
+                    ->label('Status')
+                    ->options([
+                        'open' => 'Open',
+                        'closed' => 'Closed',
+                        // Agrega otros estados si es necesario
+                    ])
+                    ->required(),
 
                 Forms\Components\Textarea::make('general_notes')
                     ->label('General Notes')

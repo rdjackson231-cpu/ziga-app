@@ -29,6 +29,10 @@ class MedicalRecordsTable
                     ->label('General Notes')
                     ->limit(50),
 
+                TextColumn::make('status')
+                    ->label('Status')
+                    ->searchable(),
+
                 TextColumn::make('created_at')
                     ->label('Created')
                     ->dateTime()
