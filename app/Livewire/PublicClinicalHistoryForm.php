@@ -54,7 +54,7 @@ class PublicClinicalHistoryForm extends Component implements HasForms
         return $schema
             ->schema([
                 // Estado general (sin exponer medical_record_id)
-                Select::make('status')
+                /*Select::make('status')
                     ->label('Estatus')
                     ->options([
                         'open'    => 'Abierto',
@@ -69,7 +69,7 @@ class PublicClinicalHistoryForm extends Component implements HasForms
                     ->rows(4)
                     ->maxLength(2000),
 
-                /*Section::make('Datos personales y contacto')
+                Section::make('Datos personales y contacto')
                     ->schema([
                         Grid::make(4)->schema([
                             TextInput::make('first_name')->label('Nombre')->required()->maxLength(120),

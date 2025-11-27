@@ -49,7 +49,7 @@ Forms\Components\Select::make('medical_record_id')
     ->helperText('Buscar por código o por nombre del paciente')
     ->required(),
 
-                Forms\Components\Select::make('status')
+                /*Forms\Components\Select::make('status')
                 ->label('Status')
                 ->options([
                     'open' => 'Open',
@@ -61,7 +61,7 @@ Forms\Components\Select::make('medical_record_id')
                 Forms\Components\Textarea::make('general_notes')
                 ->label('General Notes')
                 ->rows(5)
-                ->maxLength(2000),
+                ->maxLength(2000),*/
 
                 Section::make('Submission & Link')
                     ->schema([

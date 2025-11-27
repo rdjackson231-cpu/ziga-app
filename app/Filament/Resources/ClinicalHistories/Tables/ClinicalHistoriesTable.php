@@ -24,7 +24,7 @@ class ClinicalHistoriesTable
                     ->sortable()
                     ->searchable(),
 
-                Tables\Columns\TextColumn::make('status')
+                /*Tables\Columns\TextColumn::make('status')
                     ->label('Status')
                     ->sortable()
                     ->badge()
@@ -38,7 +38,7 @@ class ClinicalHistoriesTable
                 Tables\Columns\TextColumn::make('general_notes')
                     ->label('Notes')
                     ->limit(50)
-                    ->tooltip(fn ($record) => $record->general_notes),
+                    ->tooltip(fn ($record) => $record->general_notes),*/
                     
                 Tables\Columns\TextColumn::make('created_at')
                     ->label('Created')
