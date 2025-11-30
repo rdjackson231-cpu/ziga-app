@@ -25,6 +25,15 @@ class PacienteResource extends Resource
 
     protected static ?string $recordTitleAttribute = 'Paciente';
 
+        // Añade esta línea para definir la etiqueta singular
+    protected static ?string $modelLabel = 'Paciente';
+
+    // Añade esta línea para definir la etiqueta plural
+    protected static ?string $pluralModelLabel = 'Pacientes';
+
+    // Añade esta línea para cambiar la etiqueta
+    protected static ?string $navigationLabel = 'Pacientes';
+
     public static function form(Schema $schema): Schema
     {
         return PacienteForm::configure($schema);

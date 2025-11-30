@@ -23,7 +23,16 @@ class MedicalRecordResource extends Resource
 
     protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedRectangleStack;
 
-    protected static ?string $recordTitleAttribute = 'Medical Record';
+    protected static ?string $recordTitleAttribute = 'Expediente';
+
+        // Añade esta línea para definir la etiqueta singular
+    protected static ?string $modelLabel = 'Expediente';
+
+    // Añade esta línea para definir la etiqueta plural
+    protected static ?string $pluralModelLabel = 'Expedientes';
+
+    // Añade esta línea para cambiar la etiqueta
+    protected static ?string $navigationLabel = 'Expedientes';
 
     public static function form(Schema $schema): Schema
     {

@@ -22,7 +22,16 @@ class ConsultationResource extends Resource
 
     protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedRectangleStack;
 
-    protected static ?string $recordTitleAttribute = 'Consultation';
+    protected static ?string $recordTitleAttribute = 'Consulta';
+
+        // Añade esta línea para definir la etiqueta singular
+    protected static ?string $modelLabel = 'Consulta';
+
+    // Añade esta línea para definir la etiqueta plural
+    protected static ?string $pluralModelLabel = 'Consultas';
+
+    // Añade esta línea para cambiar la etiqueta
+    protected static ?string $navigationLabel = 'Consultas';
 
     public static function form(Schema $schema): Schema
     {

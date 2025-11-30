@@ -23,6 +23,15 @@ class DoctorResource extends Resource
 
     protected static ?string $recordTitleAttribute = 'Doctor';
 
+        // Añade esta línea para definir la etiqueta singular
+    protected static ?string $modelLabel = 'Doctor';
+
+    // Añade esta línea para definir la etiqueta plural
+    protected static ?string $pluralModelLabel = 'Doctores';
+
+    // Añade esta línea para cambiar la etiqueta
+    protected static ?string $navigationLabel = 'Doctores';
+
     public static function form(Schema $schema): Schema
     {
         return DoctorForm::configure($schema);

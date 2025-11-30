@@ -25,6 +25,15 @@ class ClinicalHistoryResource extends Resource
 
     protected static ?string $recordTitleAttribute = 'Historia Clínica';
 
+        // Añade esta línea para definir la etiqueta singular
+    protected static ?string $modelLabel = 'Historia Clínica';
+
+    // Añade esta línea para definir la etiqueta plural
+    protected static ?string $pluralModelLabel = 'Historias Clínicas';
+
+    // Añade esta línea para cambiar la etiqueta
+    protected static ?string $navigationLabel = 'Historias Clínicas';
+
     public static function form(Schema $schema): Schema
     {
         return ClinicalHistoryForm::configure($schema);
